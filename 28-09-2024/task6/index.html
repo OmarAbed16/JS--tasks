@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      .error {
+        color: red;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="registrationForm">
+      <label
+        >Username: <input type="text" id="username" /><span
+          class="error"
+        ></span></label
+      ><br />
+      <label
+        >Password: <input type="password" id="password" /><span
+          class="error"
+        ></span></label
+      ><br />
+      <label
+        >Confirm Password: <input type="password" id="confirmPassword" /><span
+          class="error"
+        ></span></label
+      ><br />
+      <button type="submit">Register</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (e) {
+          document
+            .querySelectorAll(".error")
+            .forEach((span) => (span.textContent = ""));
+          document.querySelectorAll("input").forEach((input) => {
+            if (!input.value) {
+              input.nextElementSibling.textContent = "Required";
+              e.preventDefault();
+            }
+          });
+        });
+    </script>
+  </body>
+</html>

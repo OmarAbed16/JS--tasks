@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+    <style>
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2.5em;
+        color: #333;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Task list styles */
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin: 10px 0;
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      li:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      a {
+        text-decoration: none;
+        color: #2a5f9e;
+        font-size: 1.4em;
+        display: block;
+      }
+
+      a:hover {
+        color: #ff6600;
+      }
+
+      /* Search bar */
+      .search-box {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .search-box input {
+        padding: 10px;
+        width: 80%;
+        max-width: 500px;
+        font-size: 1.1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Date section */
+      .date-section {
+        margin-top: 20px;
+      }
+
+      .date-section h2 {
+        margin: 15px 0;
+        font-size: 2em;
+        color: #444;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Task List</h1>
+
+      <!-- Search bar -->
+      <div class="search-box">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search for a task..."
+          onkeyup="filterTasks()"
+        />
+      </div>
+
+      <!-- Task list -->
+
+      <div class="date-section" id="date-24-09-2024">
+        <h2>24-09-2024</h2>
+        <ul class="taskList">
+          <li>
+            <a
+              target="_blank"
+              href="24-09-2024/Data Types and Operators/Data Types and Operators/Data Types and Operators.html"
+              >Data Types and Operators-part1(open inspect)</a
+            >
+          </li>
+
+          <li>
+            <a
+              target="_blank"
+              href="24-09-2024/Data Types and Operators/Data Types and Operators 1/Data Types and Operators.html"
+              >Data Types and Operators-part2(open inspect)</a
+            >
+          </li>
+
+          <li>
+            <a target="_blank" href="24-09-2024/Strings/string/index.html"
+              >Strings-part1(open inspect)</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="24-09-2024/Strings/string1/index.html"
+              >Strings-part2(open inspect)</a
+            >
+          </li>
+
+          <li>
+            <a target="_blank" href="24-09-2024/Arrays/array1/index.html"
+              >Arrays-part1(open inspect)</a
+            >
+          </li>
+
+          <li>
+            <a target="_blank" href="24-09-2024/Arrays/array2/index.html"
+              >Arrays-part2(open inspect)</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="24-09-2024/Functions/index.html"
+              >Functions(open inspect)</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="24-09-2024/conditions/conditions/index.html"
+              >Conditions(open inspect)</a
+            >
+          </li>
+
+          <li>
+            <a target="_blank" href="24-09-2024/loops/loops/index.html"
+              >Loops(open inspect)</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="date-section" id="date-25-09-2024">
+        <h2>25-09-2024</h2>
+        <ul class="taskList">
+          <li>
+            <a target="_blank" href="25-09-2024/index.html"
+              >25-09-2024 tasks(open inspect)</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div id="taskContainer">
+        <div class="date-section" id="date-28-09-2024">
+          <h2>28-09-2024</h2>
+          <ul class="taskList">
+            <li>
+              <a target="_blank" href="28-09-2024/task1/index.html">Task 1</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task2/index.html">Task 2</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task3/index.html">Task 3</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task4/index.html">Task 4</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task5/index.html">Task 5</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task6/index.html">Task 6</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task7/index.html">Task 7</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task8/index.html">Task 8</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task9/index.html">Task 9</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task10/index.html">Task 10</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task11/index.html">Task 11</a>
+            </li>
+            <li>
+              <a target="_blank" href="28-09-2024/task12/index.html">Task 12</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Add more date sections as needed -->
+      </div>
+    </div>
+
+    <script>
+      // Function to filter tasks
+      function filterTasks() {
+        const input = document.getElementById("search").value.toLowerCase();
+        const taskLists = document.querySelectorAll(".taskList");
+
+        taskLists.forEach((taskList) => {
+          const tasks = taskList.querySelectorAll("li");
+
+          tasks.forEach((task) => {
+            const taskText = task.textContent.toLowerCase();
+            if (taskText.includes(input)) {
+              task.style.display = "";
+            } else {
+              task.style.display = "none";
+            }
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

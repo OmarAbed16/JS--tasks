@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 5px 0;
+      }
+      button {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My shopping list</h1>
+    <input id="item" placeholder="Enter a new item" autofocus />
+    <button onclick="addItem()">Add item</button>
+    <ul id="list"></ul>
+
+    <script>
+      function addItem() {
+        const item = document.getElementById("item");
+        if (item.value) {
+          const li = document.createElement("li");
+          li.innerHTML = `${item.value} <button onclick="this.parentNode.remove()">Delete</button>`;
+          document.getElementById("list").appendChild(li);
+          item.value = "";
+          item.focus();
+        }
+      }
+    </script>
+  </body>
+</html>

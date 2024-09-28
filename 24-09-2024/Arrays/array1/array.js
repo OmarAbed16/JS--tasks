@@ -1,0 +1,10 @@
+let arr = ["Coding", "Academy", "By", "Orange"];
+arr.push("Jordan");
+console.log(arr);
+console.log(arr.slice(0, 2));
+arr.unshift("Welcome", "To");
+console.log(arr.slice(0, -1));
+console.log(arr.slice(3, -1));
+console.log(arr[2] + " " + arr[3] + " " + arr[4] + " " + arr[5]);
+console.log(arr.slice(2, 6));
+console.log(arr.filter((words) => words === "Coding" || words === "Orange"));

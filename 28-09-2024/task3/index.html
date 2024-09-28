@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Password Match Validation</title>
+    <style>
+      .error {
+        color: red;
+        font-size: 0.9em;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="userForm">
+      <div>
+        <input type="text" id="username" placeholder="Username" />
+        <span class="error" id="usernameError"></span><br /><br />
+      </div>
+      <div>
+        <input type="password" id="password" placeholder="Password" />
+        <span class="error" id="passwordError"></span><br /><br />
+      </div>
+      <div>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+        />
+        <span class="error" id="confirmPasswordError"></span><br /><br />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function validateInput(inputId, errorId, errorMessage) {
+        const inputElement = document.getElementById(inputId);
+        const errorElement = document.getElementById(errorId);
+        if (inputElement.value.trim() === "") {
+          errorElement.textContent = errorMessage;
+          return false;
+        } else {
+          errorElement.textContent = "";
+          return true;
+        }
+      }
+
+      function validatePasswordMatch(
+        passwordId,
+        confirmPasswordId,
+        errorId,
+        errorMessage
+      ) {
+        const passwordElement = document.getElementById(passwordId);
+        const confirmPasswordElement =
+          document.getElementById(confirmPasswordId);
+        const errorElement = document.getElementById(errorId);
+        if (passwordElement.value !== confirmPasswordElement.value) {
+          errorElement.textContent = errorMessage;
+          return false;
+        } else {
+          errorElement.textContent = "";
+          return true;
+        }
+      }
+
+      document
+        .getElementById("userForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const isUsernameValid = validateInput(
+            "username",
+            "usernameError",
+            "Username is required"
+          );
+          const isPasswordValid = validateInput(
+            "password",
+            "passwordError",
+            "Password is required"
+          );
+          const isConfirmPasswordValid = validateInput(
+            "confirmPassword",
+            "confirmPasswordError",
+            "Confirm Password is required"
+          );
+          const isPasswordMatch = validatePasswordMatch(
+            "password",
+            "confirmPassword",
+            "confirmPasswordError",
+            "Passwords do not match"
+          );
+
+          if (
+            isUsernameValid &&
+            isPasswordValid &&
+            isConfirmPasswordValid &&
+            isPasswordMatch
+          ) {
+            alert("Form submitted successfully!");
+          }
+        });
+    </script>
+  </body>
+</html>

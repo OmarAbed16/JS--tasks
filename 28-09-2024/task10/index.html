@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Count</title>
+  </head>
+  <body>
+    <h1>Word Count</h1>
+    <p id="text">
+      This is an example paragraph. It contains multiple sentences and several
+      words to count.
+    </p>
+    <p id="wordCount"></p>
+
+    <script>
+      const paragraph = document.getElementById("text").textContent;
+      const wordCount = paragraph.split(" ").length;
+      console.log(paragraph.split(" "));
+      document.getElementById(
+        "wordCount"
+      ).textContent = `Word Count: ${wordCount}`;
+    </script>
+  </body>
+</html>

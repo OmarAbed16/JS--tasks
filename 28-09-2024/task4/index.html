@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit" id="registerBtn" disabled>Register</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("registerForm");
+      const inputs = form.querySelectorAll("input");
+      const registerBtn = document.getElementById("registerBtn");
+
+      const toggleButton = () => {
+        registerBtn.disabled = !Array.from(inputs).every(
+          (input) => input.value
+        );
+      };
+
+      inputs.forEach((input) => input.addEventListener("input", toggleButton));
+    </script>
+  </body>
+</html>

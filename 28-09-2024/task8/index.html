@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Source Link</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">
+      This is an example paragraph containing some extraordinarily long words
+      that need to be highlighted.
+    </p>
+    <a href="https://google.com/">Source</a>
+
+    <script>
+      const paragraph = document.getElementById("text");
+      paragraph.innerHTML = paragraph.textContent
+        .split(" ")
+        .map((word) =>
+          word.length > 8 ? `<span class="highlight">${word}</span>` : word
+        )
+        .join(" ");
+    </script>
+  </body>
+</html>

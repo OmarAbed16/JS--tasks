@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Labels</title>
+  </head>
+  <body>
+    <form id="userForm">
+      <input type="text" id="username" placeholder="Username" /><br /><br />
+      <input type="password" id="password" placeholder="Password" /><br /><br />
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm Password"
+      /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function addLabel(inputId, labelText) {
+        const inputElement = document.getElementById(inputId);
+        const label = document.createElement("label");
+        label.setAttribute("for", inputId);
+        label.textContent = labelText;
+        inputElement.parentNode.insertBefore(label, inputElement);
+      }
+
+      addLabel("username", "Username: ");
+      addLabel("password", "Password: ");
+      addLabel("confirmPassword", "Confirm Password: ");
+    </script>
+  </body>
+</html>
