@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Fetch</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      #pokemon-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .pokemon {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        text-align: center;
+        background-color: #fff;
+      }
+      img {
+        width: 100px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pokémon Abilities and Images</h1>
+    <div id="pokemon-container"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
